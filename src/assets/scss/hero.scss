@@ -1,60 +1,83 @@
 @import '../font/font.scss';
 
-.hero-section{
+.hero-section {
     margin-top: 255px;
-    .herocircle{
+    @media (max-width:"991px") {
+        margin-top: 162px;
+    }
+    @media (max-width:"540px") {
+        margin-top: 40px;
+    }
+
+    .herocircle {
         position: absolute;
         top: 112px;
         right: 500px;
     }
-    .herostar{
+
+    .herostar {
         position: absolute;
         top: 186px;
         right: 200px;
     }
-    .hero-row{
+
+    .hero-row {
         margin: 0 !important;
         max-width: 1140px;
         width: 100%;
         position: relative;
         margin: auto !important;
-        .discription{
+        height: auto;
+
+        .discription {
             z-index: 1;
             padding-left: 84px;
-            @media (max-width:"956px") {
+
+            @media (max-width:"991px") {
                 padding-left: 50px;
+                order: 2;
             }
-            h3{
+
+            h3 {
                 color: $portfolio-white;
                 font-family: spaceGrotesk-regular;
                 font-size: 58.575px;
                 font-style: normal;
                 font-weight: 300;
-                line-height: 114%; /* 66.776px */
+                line-height: 114%;
+                /* 66.776px */
                 margin-top: -111px;
+
                 @media (max-width : "540px") {
                     font-size: 48px;
                 }
+                @media (max-width:"991px") {
+                    margin-top: 0px;
+                }
                 @media (max-width : "449px") {
                     font-size: 34px;
-                } 
-                
-            }
-            h4{
-                    color: $primary-color;
-                    font-family: spaceGrotesk-regular;
-                    font-size: 58.575px;
-                    font-style: normal;
-                    font-weight: 700;
-                    line-height: 114%;
-                    @media (max-width : "540px") {
-                        font-size: 48px;
-                    }
-                    @media (max-width : "449px") {
-                        font-size: 34px;
-                    }
                 }
-            .hero-description{
+
+            }
+
+            h4 {
+                color: $primary-color;
+                font-family: spaceGrotesk-regular;
+                font-size: 58.575px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 114%;
+
+                @media (max-width : "540px") {
+                    font-size: 48px;
+                }
+
+                @media (max-width : "449px") {
+                    font-size: 34px;
+                }
+            }
+
+            .hero-description {
                 color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
                 font-family: satoshi-regular;
                 font-size: 16px;
@@ -64,10 +87,24 @@
                 margin-top: 20px;
             }
         }
-          
-.hero-image{
-    position: absolute;
-    z-index: 0; 
+
+        .hero-avatar {
+            z-index: 1;
+            margin-top: -85px;
+
+            @media (max-width:"991px") {
+                order: 1;
+                margin-top: 0px;
+                text-align: center;
+            }
+        }
+
+        .hero-image {
+            position: absolute;
+            z-index: 0;
+            @media (max-width:"991px") {
+                bottom: -33px;
+            }
 
         }
 
