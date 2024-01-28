@@ -1,0 +1,262 @@
+@import '../font/font.scss';
+@import './Navbar.scss';
+@import './hero.scss';
+@import './mixin.scss';
+
+$bg-color :var(--Unnamed-Color, #0A0A0C);
+
+body {
+    background-color: $bg-color;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.about-me {
+    margin-top: 350px;
+    @media (max-width:"1130px") {
+        margin-top: 300px;
+    }
+    @media (max-width:"768px") {
+        margin-top: 200px;
+    }
+    @media (max-width:"540px") {
+        margin-top: 100px;
+    }
+    .about-title {
+        @include main-title;
+    }
+
+    .sub-title {
+        @include sub-title;
+
+        span {
+            @include title-primary;
+        }
+    }
+
+    .about-me-img {
+        display: flex;
+        margin: auto;
+        margin-top: 64px;
+    }
+}
+
+.my-service {
+    margin-top: 100px;
+    
+    .service-title {
+        @include main-title;
+    }
+
+    .sub-title {
+        @include sub-title;
+
+        span {
+            @include title-primary;
+        }
+    }
+
+    .description {
+        @include description(426.633px);
+    }
+
+    .card-section {
+        margin-top: 116px;
+        display: flex;
+        justify-content: space-between;
+        column-gap: 6px;
+
+        @media (max-width:"1235px") {
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 69px;
+        }
+        
+
+        .card {
+            background: var(--Unnamed-Color, linear-gradient(233deg, #0E0E10 27.06%, rgba(23, 23, 26, 0.23) 92.12%));
+            display: flex;
+            width: 369.333px;
+            padding: 56px 24px 24px 24px;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+            height: 227px;
+            
+            .circle {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+
+            .service-logo {
+                position: absolute;
+                top: -52px;
+            }
+
+            .card-body {
+                padding: 0;
+
+                .card-title {
+                    color: var(--Unnamed-Color, #E6E6E6);
+                    font-family: spaceGrotesk-regular;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    text-align: center;
+                }
+
+                .border-line {
+                    background: #194BFD;
+                    width: 19.281px;
+                    height: 2px;
+                    border: 2px solid #194BFD;
+                    display: inline-block;
+                }
+
+                .border-second {
+                    background: #194BFD;
+                    width: 7.844px;
+                    height: 2px;
+                    border: 2px solid #194BFD;
+                    display: inline-block;
+                    margin-left: 4px;
+                }
+
+                .card-subtitle {
+                    margin-top: 8px;
+                    border-radius: 20px;
+                }
+
+                .card-text {
+                    margin-top: 16px;
+                    width: 254.266px;
+                    color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+                    text-align: center;
+                    font-family: satoshi-regular;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+
+.my-portfolio {
+    margin-top: 100px;
+
+    .portfolio-title {
+        @include main-title;
+    }
+
+    .sub-title {
+        @include sub-title;
+
+        span {
+            @include title-primary;
+        }
+    }
+
+    .description {
+        @include description(426.633px);
+    }
+
+    .portfolio-section {
+        margin-top: 64px;
+        background-image: url('../image/portfolio/portfoliobanner.svg');
+        background-size: cover;
+        /* Adjust this property based on your preference */
+        background-position: center;
+        /* Adjust this property based on your preference */
+        background-repeat: no-repeat;
+        width: 1439.477px;
+        height: 585.672px;
+        // height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .view-all-btn {
+            color: var(--Unnamed-Color, #E6E6E6);
+            font-family: satoshi-regular;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 114%;
+            width: 196px;
+            height: 40px;
+            padding: 12px 18px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border-radius: 29px;
+            background: var(--Unnamed-Color, linear-gradient(94deg, #194BFD -15.33%, #AD13FB 139.21%));
+        }
+    }
+}
+
+.footer-section {
+    margin-top: 100px;
+}
+
+
+.portfolio-page {
+    margin-top: 50px;
+
+    .card-section {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 16px;
+        flex-wrap: wrap;
+        .project-link {
+            text-decoration: none; /* Remove underline */
+            color: inherit;
+            &:hover{
+                text-decoration: underline;
+            }
+            .card {
+                background: var(--Unnamed-Color, linear-gradient(233deg, #0E0E10 27.06%, rgba(23, 23, 26, 0.23) 92.12%));
+                display: flex;
+                width: 369.333px;
+                padding: 24px 24px 24px 24px;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+                position: relative;
+                height: 313px;
+                
+
+                .card-body {
+                    padding: 0;
+
+                    .card-title {
+                        color: var(--Unnamed-Color, #E6E6E6);
+                        font-family: spaceGrotesk-regular;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        text-align: center;
+                    }
+
+                    .card-text {
+                        margin-top: 16px;
+                        // width: 254.266px;
+                        color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+                        text-align: start;
+                        font-family: satoshi-regular;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+    }
+}
