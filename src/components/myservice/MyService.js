@@ -2,13 +2,14 @@
 import Image from 'next/image'
 import React from 'react'
 import { Card, CardBody, CardSubtitle, CardText, CardTitle } from 'reactstrap'
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useAnimation } from 'framer-motion';
 
 import createsolution from '../../assets/image/myservice/createsolution.svg'
 import circle from '../../assets/image/myservice/circle.svg'
 import uiuxdesign from '../../assets/image/myservice/uiuxdesign.svg'
-
+import codelogo from '../../assets/image/myservice/codelogo.svg'
 function MyService() {
+    const controls = useAnimation();
     let data = [{
         id: 1,
         title: "Creative solutions",
@@ -25,7 +26,7 @@ function MyService() {
         id: 3,
         title: "Web development",
         description: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.",
-        img: uiuxdesign
+        img: codelogo
     },
     ]
     return (
@@ -41,8 +42,7 @@ function MyService() {
                                 key={item.id}
                                 initial={{ opacity: 0, y: 100 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -50 }}
-                                
+                                controls={controls}                          
                             >
                                 <Card>
                                     <Image src={circle} alt="sidecircle" className="circle" />

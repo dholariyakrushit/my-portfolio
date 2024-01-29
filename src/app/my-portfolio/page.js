@@ -2,28 +2,29 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardBody, CardText, CardTitle } from 'reactstrap';
 
-import portfoliobanner from '../../assets/image/portfolio/portfoliobanner.svg';
-
+import movix from '../../assets/image/portfolio/movix.png';
+import pantoui from '../../assets/image/portfolio/pantoui.png';
+import golobeui from '../../assets/image/portfolio/golobeui.png';
 function portfolio() {
     let data=[{
         id:1,
         title:"movix",
-        description:"",
-        img:portfoliobanner,
+        description:"Embark on a cinematic journey with our movie details web app, offering users the ability to explore a diverse array of films and TV serials. Immerse yourself in a visually appealing interface, where you can view comprehensive details, ratings, and reviews contributed by the community.",
+        img:movix,
         link:"https://movix-channel.netlify.app/"
     },
     {
         id:2,
         title:"golobe",
-        description:"",
-        img:portfoliobanner,
+        description:"Travel planning with our user-friendly UI for booking both travel and hotel tickets. ",
+        img:golobeui,
         link:"https://golobedesign.netlify.app/"
     },
     {
         id:3,
         title:"panto",
-        description:"",
-        img:portfoliobanner,
+        description:"Step into a world of refined simplicity with our minimalistic and modern UI design, meticulously tailored with Tailwind CSS. Uncomplicated yet sophisticated, our interface blends clean lines and contemporary aesthetics for a visually pleasing and intuitive user experience.",
+        img:pantoui,
         link:"https://panto-tailwind.netlify.app/"
     },
     
@@ -51,7 +52,7 @@ function portfolio() {
                     />
                     <CardBody>
                         <CardText>
-                            Some quick example text to build on the card title and make up the bulk of the card‘s content.
+                            {item.description}
                         </CardText>
                     </CardBody>
                 </Card>
