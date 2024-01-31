@@ -82,7 +82,7 @@ body {
             align-items: center;
             gap: 16px;
             position: relative;
-            height: 227px;
+            height: 100%;
             
             .circle {
                 position: absolute;
@@ -228,12 +228,12 @@ body {
                 align-items: center;
                 gap: 16px;
                 position: relative;
-                height: auto;
+                height: 100%;
                 
 
                 .card-body {
                     padding: 0;
-
+                    flex: initial;
                     .card-title {
                         color: var(--Unnamed-Color, #E6E6E6);
                         font-family: spaceGrotesk-regular;

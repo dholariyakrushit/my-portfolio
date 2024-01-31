@@ -18,10 +18,11 @@ function HeroSection() {
             <motion.div
               initial={{ opacity: 0, x: -100,y:30 }}
               animate={{ opacity: 1, x: 0,y:0 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.4,delay:0.3 }}
             >
               <h3>This is your web developer </h3><h4> Krushit Dholariya</h4>
-              <p className='hero-description'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+              <p className='hero-description'>Hi, I'm a passionate React.js developer dedicated to creating interactive and user-friendly web applications.
+</p>
             </motion.div>
           </AnimatePresence>
         </Col>

@@ -1,5 +1,6 @@
 "use client"; 
 
+import Image from 'next/image';
 import { useState } from 'react';
 import {
   Collapse,
@@ -11,6 +12,7 @@ import {
   NavLink
 } from 'reactstrap';
 
+import logo from '../../assets/image/logo.svg'
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -19,7 +21,9 @@ function NavBar() {
     return (
       <div>
         <Navbar expand={"md"}  color="dark" light="true" dark="true" className='navbar'>
-          <NavbarBrand href="/">Krushit</NavbarBrand>
+          <NavbarBrand href="/">
+            <Image src={logo} alt="logo" className="img-fluid logo"/>
+          </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mx-auto" navbar>
