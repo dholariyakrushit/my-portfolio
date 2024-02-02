@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import movix from '../../assets/image/portfolio/movix.png';
 import pantoui from '../../assets/image/portfolio/pantoui.png';
 import golobeui from '../../assets/image/portfolio/golobeui.png';
+import ecom from '../../assets/image/portfolio/ecom.png';
 function portfolio() {
     let data = [{
         id: 1,
@@ -28,6 +29,13 @@ function portfolio() {
         description: "Step into a world of refined simplicity with our minimalistic and modern UI design, meticulously tailored with Tailwind CSS. Uncomplicated yet sophisticated, our interface blends clean lines and contemporary aesthetics for a visually pleasing and intuitive user experience.",
         img: pantoui,
         link: "https://panto-tailwind.netlify.app/"
+    },
+    {
+        id: 4,
+        title: "Ecom service ",
+        description: "Designed and developed a seamless e-commerce web application with user-friendly features, enabling users to effortlessly add products to their cart, explore detailed product information, and implement secure authentication through local storage. Elevated user experience and functionality showcased in my portfolio",
+        img: ecom,
+        link: "https://ecom-service.netlify.app/"
     },
 
     ]
